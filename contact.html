@@ -144,4 +144,31 @@
 </script>
 <script type="text/javascript" src="./main.70a66962.js"></script></body>
 
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
+<script>
+  function sendEmail() {
+    var email = document.getElementById("email").value;
+    var subject = document.getElementById("subject").value;
+    var message = document.getElementById("message").value;
+
+    Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "kwtrjabri@gmail.com",
+    Password : "password",
+    To:"kwtrjabri@gmail.com",
+    From: email,
+    Subject: subject,
+    Body: message
+}).then(
+  message => alert(message)
+);
+
+}
+
+
+
+</script>
+
 </html>
